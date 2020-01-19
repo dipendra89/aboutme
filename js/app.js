@@ -1,5 +1,6 @@
 // Asking user his/her name and giving back a simple greeting!!
 
+
 var person = prompt("Hi, please enter your name.");
 if (person != null) {
   alert('Hello ' + person + '! Welcome to my page. I hope you do not mind some fun quiz questions I have created!!');
@@ -62,7 +63,7 @@ else {
 var watchGameOfThrones = prompt('Did you watch the last season of Game of Thrones? Please respond with yes/no or y/n');
 
 if ((watchGameOfThrones.toLowerCase() === 'yes') || watchGameOfThrones.toLowerCase() ===  'y') {
-    // toLowerCase() is built in Method
+   //  toLowerCase() is built in Method
     alert('OMG, I felt like the whole America was watching the season.');
 } 
 
@@ -92,10 +93,87 @@ else {
 }
 
 
+////////////////////// Lab 3
 
+// var guessNum = 0;
+// console.log('Guessing Number');
+
+for (i = 0; i < 4; i++) {
+    guessNum = prompt ('Please guess the number between 1 and 8');
+    var int = 6;
+    if (guessNum == 6) {
+        // console.log(typeof(guessNum));
+        alert('YAY, you guessed the right number, how smart!!');
+        break;
+    } 
+    
+    else if (guessNum < 6) {
+        alert('Guessed too low');
+    } 
+
+    else if (guessNum > 6) {
+        alert('too high');
+    } 
+
+}
+
+if (guessNum != 6) {
+    alert('The correct answer is 6');
+}
+
+// 7th Question
+// for (j = 0; j < 6; j++) {
+//     var allQuestions = ["Guess what is the make of my car", "Also, Guess the color of my car?"];
+//     var choices: ["Honda", " Toyota", " Nissan", "Huyndai", "Ford", "Blue", "Black", "White", "Red", "Gray"];
+//     var answers: [1,7];
+//         }
+
+
+// var answer = false;
+
+// // for (var j=0; j <questions.length; j++)
+// var makeOfCar = ['Honda', 'Toyota', 'Nissan'];
+// while (answer != true || answer >= 6)
+
+
+
+for (var j =0; j <6; j++)
+{
+    var makeOfCar = prompt('Guess all makes of the cars I owned');
+    var car = ['Toyota','Honda', 'Nissan'];
+
+    if (makeOfCar === car[0]) {
+        alert('Yes, you got that right');
+        alert(score++);
+        break;
+
+    } else if (makeOfCar === car[1]) {
+        alert('Yes, you are right');
+        alert(score++);
+        break;
+    }
+
+    else if (makeOfCar === car[2]) {
+        alert('Yes, you got that right');
+        alert(score++);
+        break;
+    }
+    else 
+    (makeOfCar != car)
+    alert('Try again')
+
+}
+
+alert('The correct answer is ' + car);
+alert(score);
+
+
+/*
 
 // Saying thank you to user 
 if (person != null) {
     alert('Thank you ' + person + ' so much for visiting my ugly page and answering my fun questions.');
   }
   
+  */
+
