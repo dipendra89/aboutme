@@ -3,7 +3,11 @@ body {
 }
 
 ul {
-    background-color: #800080;
+    background-color: #e0b7e0;
+}
+
+ol {
+    background-color: #8f838f;
 }
 
 /* body {
