@@ -1,179 +1,177 @@
-// Asking user his/her name and giving back a simple greeting!!
 
+'use strict';
 
-var person = prompt("Hi, please enter your name.");
+var person = prompt('Hi, please enter your name.');
 if (person != null) {
-  alert('Hello ' + person + '! Welcome to my page. I hope you do not mind some fun quiz questions I have created!!');
+  alert('Hello ' + person + '! Welcome to my page. I have some quiz questions for you to see if you really know me.');
+  console.log('Welcome');
 }
 
+// Lets see if you really love me or not
+var correct = 0;
+
+function First() {
+var likesSeattleWeather = prompt('Do you think I like Seattle weather? Please respond with yes/no or y/n');
+console.log('Do you think I like Seattle weather?');
+
+while ((likesSeattleWeather === '') || (likesSeattleWeather === null)) {
+    likesSeattleWeather = prompt('Please, enter your response in correct format. Either yes/no or y/n');
+}
+
+if ((likesSeattleWeather.toLowerCase() === 'yes') || (likesSeattleWeather.toLowerCase() === 'y')) {
+    alert('Ohhhh, sorry! Wrong Answer, I hate to say this but I like Colorado weather better');
+} 
+else if ((likesSeattleWeather.toLowerCase() === 'no') || (likesSeattleWeather.toLowerCase() === 'n')) {
+    alert('You got it right!! You know what, lets not be sad though.');
+    correct++;
+}
+else {
+    alert('Please, enter your response in correct format. Either yes/no or y/n. It is not case sensative by the way.');
+}
+}
+First();
 
 
-// List of 5 simple and fun yes/no questions
+function Second() {
+var haveCat = prompt('Another question now. Do I have a cat in my house? Please respond with yes/no or y/n');
 
-'use strict'
-console.log('Heyyyyyyyyyy')
-
-var likesSeattleWeather = prompt('Do you like Seattle weather? Please respond with yes/no or y/n');
-
-if (likesSeattleWeather.toLowerCase() === 'yes' || likesSeattleWeather.toLowerCase() === 'y') {
-    // toLowerCase() is built in Method
-    alert('Okay, I guess you have never been to Colorado then!');
+while ((haveCat === '') || (haveCat === null)) {
+    haveCat = prompt('Please, enter your response in correct format. Either yes/no or y/n');
+}
+if ((haveCat.toLowerCase() === 'yes') || (haveCat.toLowerCase() === 'y')) {
+    alert('Nahhh, I do not. I used to have one long time ago though.');
 } 
 
-else if (likesSeattleWeather === 'no' || likesSeattleWeather.toLowerCase() === 'n') {
-    alert('I feel you, but lets try to look at the bright side.');
+else if ((haveCat.toLowerCase() === 'no') || (haveCat.toLowerCase() === 'n')) {
+    alert('You really do know me well, hunh!! It is okay, we can be friends');
+    correct++;
 }
 
 else {
     alert('Please, enter your response in correct format. Either yes/no or y/n. It is not case sensative by the way.');
 }
+}
+Second();
 
-var haveDog = prompt('Do you have dog? Please respond with yes/no or y/n');
 
-if ((haveDog.toLowerCase() === 'yes') || haveDog.toLowerCase() === 'y') {
-    // toLowerCase() is built in Method
-    alert('YAY, I do too. They are so cute.');
+function Third() {
+var educationCost = prompt('OK next one. Do I believe attending college is expensive?');
+
+while ((educationCost === '') || (educationCost === null)) {
+    educationCost = prompt('Please, enter your response in correct format. Either yes/no or y/n');
+}
+if ((educationCost.toLowerCase() === 'yes') || (educationCost.toLowerCase() === 'y')) {
+    alert('YUP, it is. I wish I was a millionaire.');
+    correct++;
 } 
 
-else if ((haveDog.toLowerCase() === 'no') || haveDog.toLowerCase() === 'n') {
-    alert('Really, you probably never had one then, just saying. I do not mean to be rude though.');
+else if ((educationCost.toLowerCase() ==='no') || (educationCost.toLowerCase() === 'n')) {
+    alert('Nooooo!! Wrong!');
 }
 
 else {
     alert('Please, enter your response in correct format. Either yes/no or y/n. It is not case sensative by the way.');
 }
+}
+Third();
 
 
-var educationCost = prompt('Do you beleive that attending college is expensive? Please respond with yes/no or y/n');
+function Fourth() {
+var watchGameOfThrones = prompt('Did I watch all seasons (from season 1 to season 8) of Game of Thrones? Please respond with yes/no or y/n');
 
-if ((educationCost.toLowerCase() === 'yes') || educationCost.toLowerCase() === 'y') {
-    // toLowerCase() is built in Method
-    alert('I know right. I wish either me or my parents were billionaire.');
+while ((watchGameOfThrones === '') || (watchGameOfThrones === null)) {
+    watchGameOfThrones = prompt('Please, enter your response in correct format. Either yes/no or y/n');
+}
+if ((watchGameOfThrones.toLowerCase() === 'yes') || (watchGameOfThrones.toLowerCase() ===  'y')) {
+    alert('Nope, I missed first couple seasons!! I did not miss the last season though');
+    correct++;
+} 
+else if ((watchGameOfThrones.toLowerCase() ==='no') || (watchGameOfThrones.toLowerCase() === 'n')) {
+    alert('You are right, I missed first couple seasons!');
+}
+else {
+    alert('Please, enter your response in correct format. Either yes/no or y/n. It is not case sensative by the way.');
+}
+}
+Fourth();
+
+
+
+function Fifth() {
+var numberOneFan = prompt('Okay, you are doing good. Almost there. Am I a fan of Star Wars Movies?');
+
+while ((numberOneFan === '') || (numberOneFan === null)) {
+    numberOneFan = prompt('Please, enter your response in correct format. Either yes/no or y/n');
+}
+if ((numberOneFan.toLowerCase() === 'yes') || (numberOneFan.toLowerCase() ===  'y')) {
+    alert('I hate to say it again, but I am not a big fan of Star Wars Movies. Yeah, I know.');
 } 
 
-else if ((educationCost ==='no') || educationCost.toLowerCase() === 'n') {
-    alert('Seriously, you are a crazy human being if you are a human being or you must be a drug dealer. Just kidding.');
+else if ((numberOneFan.toLowerCase() ==='no') || (numberOneFan.toLowerCase() === 'n')) {
+    alert('YAY, you got the correct answer, finally. Just kidding!!');
+    correct++;
 }
 
 else {
     alert('Please, enter your response in correct format. Either yes/no or y/n. It is not case sensative by the way.');
 }
-
-
-var watchGameOfThrones = prompt('Did you watch the last season of Game of Thrones? Please respond with yes/no or y/n');
-
-if ((watchGameOfThrones.toLowerCase() === 'yes') || watchGameOfThrones.toLowerCase() ===  'y') {
-   //  toLowerCase() is built in Method
-    alert('OMG, I felt like the whole America was watching the season.');
-} 
-
-else if ((watchGameOfThrones ==='no') || watchGameOfThrones.toLowerCase() === 'n') {
-    alert('Did not you have cable in your house? Not judging though.');
-
 }
-
-else {
-    alert('Please, enter your response in correct format. Either yes/no or y/n. It is not case sensative by the way.');
-}
+Fifth();
 
 
-var numberOneFan = prompt('Do you think that our intructor, Mr. Roger is a "Number 1 Fan" of Star Wars Movies? Please respond with yes/no or y/n');
+// Sixth Question
 
-if ((numberOneFan.toLowerCase() === 'yes') || numberOneFan.toLowerCase() ===  'y') {
-    // toLowerCase() is built in Method
-    alert('Oh yes, I have no doubt. Mr Roger loves Star Wars movies.');
-} 
-
-else if ((numberOneFan ==='no') || numberOneFan.toLowerCase() === 'n') {
-    alert('How dare you!! I guess you do not know our 201 instructor, Mr Roger.');
-}
-
-else {
-    alert('Please, enter your response in correct format. Either yes/no or y/n. It is not case sensative by the way.');
-}
-
-
-////////////////////// Lab 3
-
-// var guessNum = 0;
-// console.log('Guessing Number');
-
-for (i = 0; i < 4; i++) {
-    guessNum = prompt ('Please guess the number between 1 and 8');
-    var int = 6;
-    if (guessNum == 6) {
-        // console.log(typeof(guessNum));
-        alert('YAY, you guessed the right number, how smart!!');
-        break;
-    } 
-    
-    else if (guessNum < 6) {
-        alert('Guessed too low');
-    } 
-
-    else if (guessNum > 6) {
-        alert('too high');
-    } 
-
-}
-
-if (guessNum != 6) {
-    alert('The correct answer is 6');
-}
-
-// 7th Question
-// for (j = 0; j < 6; j++) {
-//     var allQuestions = ["Guess what is the make of my car", "Also, Guess the color of my car?"];
-//     var choices: ["Honda", " Toyota", " Nissan", "Huyndai", "Ford", "Blue", "Black", "White", "Red", "Gray"];
-//     var answers: [1,7];
-//         }
-
-
-// var answer = false;
-
-// // for (var j=0; j <questions.length; j++)
-// var makeOfCar = ['Honda', 'Toyota', 'Nissan'];
-// while (answer != true || answer >= 6)
-
-
-
-for (var j =0; j <6; j++)
-{
-    var makeOfCar = prompt('Guess all makes of the cars I owned');
-    var car = ['Toyota','Honda', 'Nissan'];
-
-    if (makeOfCar === car[0]) {
-        alert('Yes, you got that right');
-        alert(score++);
-        break;
-
-    } else if (makeOfCar === car[1]) {
-        alert('Yes, you are right');
-        alert(score++);
-        break;
-    }
-
-    else if (makeOfCar === car[2]) {
-        alert('Yes, you got that right');
-        alert(score++);
-        break;
-    }
-    else 
-    (makeOfCar != car)
-    alert('Try again')
-
-}
-
-alert('The correct answer is ' + car);
-alert(score);
-
-
-/*
-
-// Saying thank you to user 
-if (person != null) {
-    alert('Thank you ' + person + ' so much for visiting my ugly page and answering my fun questions.');
-  }
+function Sixth() {
+    for (var i = 0; i < 4; i++) {
   
-  */
+      var sixthQ = prompt('Guess a number between 1 and 15!');
+      var int = 9;
+  
+      if (sixthQ == 6) {
+        alert('Great job, how did you know that ' + person);
+        correct++;
+        console.log('YUP');
+      }
+  
+      else if (sixthQ < 6) {
+        alert('Too Low')
+        console.log('Too Low');
+      }
+  
+      else if (sixthQ > 6) {
+        alert('Too High');
+      }
+  
+    }
+  
+    if (sixthQ != 6) {
+      alert('The answer is 6!');
+    }
+  }
+  Sixth();
+
+// Seventh Question
+
+function Seventh() {
+
+    for (var j = 0; j < 6; j++) {
+  
+      var seventhQ = prompt('What are all the Make of cars I owned?');
+      var cars = ['honda', 'toyota', 'nissan'];
+  
+      if (seventhQ.toLowerCase() === cars[0] || seventhQ.toLowerCase() ===  cars[1] || seventhQ.toLowerCase() === cars[2]) {
+        alert('You are right!!');
+        correct++;
+        console.log('correct answer');
+      }  
+      else {
+      alert('Nope, try again'); 
+    }
+}
+}
+  Seventh();
+  
+  
+alert('Your total number of correct vanswer is : ' + correct + '. Thank you ' + person + ' for playing a game with me!');
+console.log('Game Over');
 
